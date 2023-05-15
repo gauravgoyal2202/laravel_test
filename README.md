@@ -67,6 +67,7 @@ Run the migrations with:
 `php artisan migrate`
 
 `php artisan db:seed --class=TenantsTableSeeder`
+`php artisan db:seed --class=SettingsTableSeeder`
 
 
 ### 8. Start the Local Development Server
