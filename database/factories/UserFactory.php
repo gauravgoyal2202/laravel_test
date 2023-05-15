@@ -39,11 +39,6 @@ class UserFactory extends Factory
             $user->setMeta('age', $this->faker->numberBetween(18, 60));
             $user->setMeta('address', $this->faker->address);
             $user->setMeta('phone', $this->faker->phoneNumber);
-        })->afterCreating(function (User $user) {
-            Setting::set('user_settings_' . $user->id, [
-                'theme' => $this->faker->randomElement(['light', 'dark']),
-                'language' => $this->faker->randomElement(['en', 'es', 'fr']),
-            ]);
         });
     }
 }

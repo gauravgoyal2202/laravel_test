@@ -17,6 +17,7 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Tenant</th>
+            <th scope="col">Setting</th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->tenant->tenant_hash }}</td>
+                <td>{{ $user->tenant->setting->value }}</td>
             </tr>
         @endforeach
     </tbody>
